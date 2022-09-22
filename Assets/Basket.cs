@@ -3,16 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Basket : MonoBehaviour
 {
     [Header("Set Dynamically")]
-    public Text scoreGT;
+    public TextMeshProUGUI scoreGT;
 
     void Start()
     {
         GameObject scoreGo = GameObject.Find("ScoreCounter");
-        scoreGT = scoreGo.GetComponent<Text>();
+        scoreGT = scoreGo.GetComponent < TextMeshProUGUI>();
         scoreGT.text = "0";
     }
 
