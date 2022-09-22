@@ -9,10 +9,10 @@ public class HighScore : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
-    {
+    //void Start()
+    //{
         
-    }
+    //}
 
     void Awake() {
         // If the PlayerPrefs HighScore already exists, read it
