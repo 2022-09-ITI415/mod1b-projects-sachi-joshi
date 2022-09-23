@@ -9,12 +9,6 @@ public class HighScore : MonoBehaviour
     static public int score = 1000;
 
 
-    // Start is called before the first frame update
-    //void Start()
-    //{
-        
-    //}
-
     void Awake() {
         // If the PlayerPrefs HighScore already exists, read it
         if (PlayerPrefs.HasKey("HighScore")) {
@@ -27,7 +21,7 @@ public class HighScore : MonoBehaviour
     // Update is called once per frame
     void Update()
     { 
-         TextMeshProUGUI gt = this.GetComponent< TextMeshProUGUI>();
+         TextMeshProUGUI gt = this.GetComponent<TextMeshProUGUI>();
         gt.text = "High Score:" +score;
         // Update the PlayerPrefs HighScore if necessary
         if (score > PlayerPrefs.GetInt("HighScore")) {
