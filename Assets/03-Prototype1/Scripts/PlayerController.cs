@@ -11,6 +11,11 @@ public class PlayerController : MonoBehaviour
     public Text countText;
     public Text winText;
 
+    private Rigidbody rb;
+    private int count;
+    private float movementX;
+    private float movementY;
+
     Rigidbody m_Rigidbody;
     Vector3 m_Movement;
     int m_Count;
@@ -19,8 +24,8 @@ public class PlayerController : MonoBehaviour
     {
         m_Rigidbody = GetComponent<Rigidbody>();
         m_Count = 0;
-        setCountText();
-        winText.text = "";
+       //setCountText();
+        //winText.text = "";
     }
 
     void FixedUpdate() {
@@ -38,23 +43,20 @@ public class PlayerController : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             m_Count++;
-            setCountText();
+            //setCountText();
         }
     }
 
-    void OnCollisionEnter (Collision coll) {
-        if (coll.gameObject.tag == "Obstacle")
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
-    }
 
-    void setCountText()
+    
+
+    void OnCollsionEnter (Collision coll) 
     {
-        countText.text = "Count: " + m_Count.ToString();
-        if (m_Count >= 12)
+        GameObject collidedWith = coll.gameObject;
+       if (collidedWith.tag == "obstacle")
         {
-            winText.text = "You Win!";
+            SceneManager.LoadScene("Main-Prototype 1");
         }
     }
 }
+    

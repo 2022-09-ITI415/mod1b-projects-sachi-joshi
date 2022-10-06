@@ -35,14 +35,9 @@ public class Obstacle : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter(Collider col) {
-        if (col.tag == "Player") {
-            Destroy (player);
-        }
-    }
 
     void OnCollisionEnter (Collision coll) {
-        if (coll.gameObject.tag == "Player")
+        if (coll.gameObject.tag == "player")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
