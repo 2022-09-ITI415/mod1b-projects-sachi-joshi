@@ -3,15 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Score : MonoBehaviour
-{
-    static public int score = 1;
-    
+//public class Score : MonoBehaviour
+//{
+ // [Header("Set Dynamically")]
+   // public Text scoreGT;
 
-    // Update is called once per frame
-    void Update()
-    {
-        Text gt = this.GetComponent<Text>();
-        gt.text = "Score: " + score;
-    }
-}
+    //void Start()
+    //{
+      //  GameObject scoreGo = GameObject.Find("Score");
+        //scoreGT = scoreGo.GetComponent<Text>();
+
+        //int score = int.Parse(scoreGT.text);
+        //score += 1;
+        //scoreGT.text = score.ToString();
+    //}
+//}
+

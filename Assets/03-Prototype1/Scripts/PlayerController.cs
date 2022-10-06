@@ -7,6 +7,9 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("Set Dynamically")]
+    public Text scoreGT;
+
     public float speed = 20f;
     public Text countText;
     public Text winText;
@@ -25,7 +28,7 @@ public class PlayerController : MonoBehaviour
         m_Rigidbody = GetComponent<Rigidbody>();
         m_Count = 0;
         //Score();
-        winText.text = "";
+        //winText.text = "";
     }
 
     void FixedUpdate() {
