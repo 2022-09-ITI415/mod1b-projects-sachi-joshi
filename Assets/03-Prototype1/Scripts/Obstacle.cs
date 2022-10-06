@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Obstacle : MonoBehaviour
 {
     public GameObject player;
-    float maxX = 3.5f;
+    float maxX = 4.5f;
     bool toRight;
     bool toLeft;
     public float speed;
