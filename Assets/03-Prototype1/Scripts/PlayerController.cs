@@ -24,8 +24,8 @@ public class PlayerController : MonoBehaviour
     {
         m_Rigidbody = GetComponent<Rigidbody>();
         m_Count = 0;
-       //setCountText();
-        //winText.text = "";
+        //Score();
+        winText.text = "";
     }
 
     void FixedUpdate() {
@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             m_Count++;
-            //setCountText();
+            //Score();
         }
     }
 
