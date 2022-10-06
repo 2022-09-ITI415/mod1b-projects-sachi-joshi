@@ -55,8 +55,13 @@ public class PlayerController : MonoBehaviour
         GameObject collidedWith = coll.gameObject;
        if (collidedWith.tag == "obstacle")
         {
-            SceneManager.LoadScene("Main-Prototype 1");
+            SceneManager.LoadScene("Main-Prototype 1"); 
         }
     }
+
+    //void SetCountText()
+    //{
+      //  countText.text = "Count:" + count.ToString;
+    //}
 }
     
