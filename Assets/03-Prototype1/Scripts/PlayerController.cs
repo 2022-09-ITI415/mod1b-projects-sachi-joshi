@@ -21,14 +21,22 @@ public class PlayerController : MonoBehaviour
 
     Rigidbody m_Rigidbody;
     Vector3 m_Movement;
-    int m_Count;
 
     void Start()
     {
         m_Rigidbody = GetComponent<Rigidbody>();
-        m_Count = 0;
-        //Score();
-        //winText.text = "";
+        
+        winText.enabled = false;
+
+        
+    {
+        GameObject scoreGo = GameObject.Find("CountText");
+        scoreGT = scoreGo.GetComponent<Text>();
+
+        count = int.Parse(scoreGT.text);
+        //count += 1;
+        scoreGT.text = count.ToString();
+    }
     }
 
     void FixedUpdate() {
@@ -45,9 +53,17 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("PickUp"))
         {
             other.gameObject.SetActive(false);
-            m_Count++;
-            //Score();
+            count = count + 1 ;
+             scoreGT.text = count.ToString();
+            //SetCountText();
         }
+
+        if (other.gameObject.CompareTag("end"))
+        {
+            winText.enabled = true;
+        }
+
+    
     }
 
 
@@ -60,11 +76,12 @@ public class PlayerController : MonoBehaviour
         {
             SceneManager.LoadScene("Main-Prototype 1"); 
         }
+        
     }
 
     //void SetCountText()
     //{
-      //  countText.text = "Count:" + count.ToString;
-    //}
+       //countText.text = "Count:" + count.ToString;
+   // }
 }
     

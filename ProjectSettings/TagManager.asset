@@ -9,6 +9,8 @@ TagManager:
   - obstacle
   - end
   - player
+  - winText
+  - WinText
   layers:
   - Default
   - TransparentFX
