@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Apple
+  - PickUp
+  - obstacle
+  - end
+  - player
+  - winText
+  - WinText
   layers:
   - Default
   - TransparentFX
@@ -13,9 +20,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - AppleTree
+  - Apple
+  - Basket
   - 
   - 
   - 
